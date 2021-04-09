@@ -1,8 +1,10 @@
 import "./App.css";
 import Array from "./Array";
 import BtnContainer from "./BtnContainer";
+import { useProductsContext } from "./Context";
 function App() {
-  let n = 20;
+  const { number } = useProductsContext();
+  let n = number;
   const containerStyle = {
     display: `grid`,
     gridTemplateColumns: `repeat(${n}, 1fr)`,
